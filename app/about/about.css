@@ -1,0 +1,492 @@
+/* About Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--cream-light) 0%, var(--off-white) 100%);
+  position: relative;
+}
+
+.about-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(143, 188, 148, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.about-header-badge {
+  display: inline-block;
+  background: var(--white);
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  animation: fadeInDown 0.8s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+.about-header-badge span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  position: relative;
+  z-index: 2;
+}
+
+.about-intro-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--sage-green);
+  position: relative;
+  z-index: 2;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  line-height: 1.9;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro-highlight {
+  font-size: 1.3rem;
+  color: var(--charcoal);
+  font-weight: 600;
+  line-height: 1.8;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--cream-light);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Our Story Section */
+.story-section {
+  background: var(--white);
+  padding: 4rem 2rem;
+  margin-bottom: 5rem;
+}
+
+.story-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+  text-align: justify;
+}
+
+.story-tagline {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--cream-light);
+  flex-wrap: wrap;
+}
+
+.story-tagline span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.tagline-supplied {
+  color: var(--sage-green);
+}
+
+.tagline-simplified {
+  color: var(--gold);
+}
+
+.tagline-sorted {
+  color: var(--charcoal);
+}
+
+/* Mission & Vision */
+.mission-vision {
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+}
+
+.mv-card {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--white) 0%, var(--cream-light) 100%);
+  border: 2px solid var(--cream-light);
+}
+
+.mv-card:hover {
+  border-color: var(--sage-green);
+  transform: translateY(-5px);
+}
+
+/* Mission & Vision Icons - Line Based */
+.mv-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border: 2px solid var(--charcoal);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.mv-icon::before,
+.mv-icon::after {
+  content: '';
+  position: absolute;
+  background: var(--charcoal);
+  transition: all 0.3s ease;
+}
+
+/* Mission Icon - Target/Bullseye */
+.mv-icon.icon-mission::before {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--charcoal);
+  border-radius: 50%;
+  background: transparent;
+}
+
+.mv-icon.icon-mission::after {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--charcoal);
+  border-radius: 50%;
+  background: transparent;
+}
+
+.mv-icon.icon-mission .center-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--charcoal);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Vision Icon - Telescope/Scope */
+.mv-icon.icon-vision::before {
+  width: 36px;
+  height: 2px;
+  transform: rotate(-30deg);
+  left: 14px;
+}
+
+.mv-icon.icon-vision::after {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--charcoal);
+  border-radius: 50%;
+  background: transparent;
+  right: 16px;
+}
+
+.mv-icon.icon-vision .lens {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--charcoal);
+  border-radius: 50%;
+  background: transparent;
+  right: 20px;
+  transition: all 0.3s ease;
+}
+
+.mv-card:hover .mv-icon {
+  border-color: var(--sage-green);
+  opacity: 1;
+  transform: translateY(-5px) rotate(5deg);
+}
+
+.mv-card:hover .mv-icon::before,
+.mv-card:hover .mv-icon::after {
+  border-color: var(--sage-green);
+  background-color: transparent;
+}
+
+.mv-card:hover .mv-icon .center-dot,
+.mv-card:hover .mv-icon .lens {
+  background: var(--sage-green);
+  border-color: var(--sage-green);
+}
+
+.mv-card h2 {
+  font-size: 2rem;
+  color: var(--sage-green);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.mv-card p {
+  font-size: 1.05rem;
+  color: #5a5a5a;
+  line-height: 1.8;
+}
+
+/* Values Section */
+.values-section {
+  background: var(--off-white);
+  padding: 5rem 2rem;
+}
+
+.centered-title {
+  text-align: center;
+}
+
+.centered-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.values-last-row {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.value-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--cream-light);
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sage-green), var(--gold));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover::before {
+  transform: scaleX(1);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(143, 188, 148, 0.2);
+  border-color: var(--sage-green);
+}
+
+.value-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--cream-light);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.value-card p {
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* About CTA Section */
+.about-cta {
+  background: linear-gradient(135deg, var(--sage-green) 0%, #7AAD7F 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--white);
+  margin-top: 4rem;
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-cta .btn-primary {
+  background: var(--white);
+  color: var(--sage-green);
+}
+
+.about-cta .btn-primary:hover {
+  background: var(--off-white);
+  transform: translateY(-2px);
+}
+
+.about-cta .btn-secondary {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.about-cta .btn-secondary:hover {
+  background: var(--white);
+  color: var(--sage-green);
+}
+
+/* Footer */
+.about-footer {
+  background-color: var(--cream-light);
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(90, 90, 90, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #5a5a5a;
+  font-size: 0.9rem;
+}
+
+.footer-email a {
+  color: var(--sage-green);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  font-weight: 500;
+}
+
+.footer-email a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-intro-card {
+    padding: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1.05rem;
+  }
+
+  .about-intro-highlight {
+    font-size: 1.1rem;
+  }
+
+  .story-content p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .story-tagline span {
+    font-size: 1.4rem;
+  }
+
+  .mv-card {
+    padding: 2rem;
+  }
+
+  .mv-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .value-number {
+    font-size: 2rem;
+  }
+
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-cta p {
+    font-size: 1.05rem;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .footer-content p {
+    font-size: 0.85rem;
+  }
+}
