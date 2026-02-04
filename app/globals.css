@@ -459,6 +459,14 @@ body {
   }
   
 }
+/* Navbar container adjustments for mobile */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
 /* Burger menu button - hidden on desktop */
 .burger-menu {
   display: none;
@@ -468,6 +476,7 @@ body {
   cursor: pointer;
   padding: 0;
   z-index: 1001;
+  position: relative; /* or absolute if needed */
 }
 
 .burger-menu span {
@@ -494,9 +503,10 @@ body {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  /* Show burger menu on mobile */
+  /* Show burger menu on mobile - positioned on the right */
   .burger-menu {
     display: flex;
+    margin-left: auto; /* This pushes it to the right */
   }
 
   /* Hide nav links by default on mobile */
