@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="nav-container">
         <Link href="/" className="nav-logo">
           <Image 
-            src="https://github.com/randr2405/ImagesforPOS/blob/main/ChatGPT%20Image%20Jan%2030,%202026,%2011_11_47%20AM.png?raw=true"
+            src="/logo.png"  
             alt="SupplyHubCo Logo"
             width={50}
             height={50}
