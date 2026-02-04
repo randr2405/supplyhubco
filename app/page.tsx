@@ -1,6 +1,7 @@
 'use client'
 import './home.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 interface Slide {
@@ -75,7 +76,14 @@ export default function Home() {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-badge">
-            <span>▢ Your All-in-One Office Solutions Partner</span>
+            <Image 
+              src="/logo.png"
+              alt="SupplyHubCo Logo"
+              width={20}
+              height={20}
+              className="hero-badge-logo"
+            />
+            <span>Your All-in-One Office Solutions Partner</span>
           </div>
           <h1 className="hero-title">Office Supply Hub</h1>
           <div className="hero-slogan">

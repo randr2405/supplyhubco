@@ -1,5 +1,6 @@
 import './about.css'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -7,7 +8,14 @@ export default function About() {
       {/* Header Section */}
       <section className="about-header">
         <div className="about-header-badge">
-          <span>▢ Meet Supply Hub Co</span>
+          <Image 
+            src="/logo.png"
+            alt="SupplyHubCo Logo"
+            width={20}
+            height={20}
+            className="about-badge-logo"
+          />
+          <span>Meet Supply Hub Co</span>
         </div>
         <h1 className="about-title">About Supply Hub Co</h1>
         <div className="about-intro-card">

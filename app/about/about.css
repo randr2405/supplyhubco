@@ -20,7 +20,9 @@
 }
 
 .about-header-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: var(--white);
   padding: 0.6rem 1.5rem;
   border-radius: 25px;
@@ -29,6 +31,10 @@
   animation: fadeInDown 0.8s ease-out;
   position: relative;
   z-index: 2;
+}
+
+.about-badge-logo {
+  flex-shrink: 0;
 }
 
 .about-header-badge span {
