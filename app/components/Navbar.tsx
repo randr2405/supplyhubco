@@ -3,16 +3,26 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function Navbar() {
   const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <Link href="/" className="nav-logo">
           <Image 
-            src="/logo.png"  
+            src="/logo.png"
             alt="SupplyHubCo Logo"
             width={50}
             height={50}
@@ -21,18 +31,30 @@ export default function Navbar() {
           <span className="logo-text">SupplyHubCo</span>
         </Link>
         
-        <ul className="nav-links">
+        {/* Burger menu button - only visible on mobile */}
+        <button 
+          className={`burger-menu ${isMenuOpen ? 'open' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Nav links */}
+        <ul className={`nav-links ${isMenuOpen ? 'mobile-open' : ''}`}>
           <li className={pathname === '/' ? 'active' : ''}>
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={closeMenu}>Home</Link>
           </li>
           <li className={pathname === '/about' ? 'active' : ''}>
-            <Link href="/about">About Us</Link>
+            <Link href="/about" onClick={closeMenu}>About Us</Link>
           </li>
           <li className={pathname === '/services' ? 'active' : ''}>
-            <Link href="/services">Services</Link>
+            <Link href="/services" onClick={closeMenu}>Services</Link>
           </li>
           <li className={pathname === '/contact' ? 'active' : ''}>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contact" onClick={closeMenu}>Contact Us</Link>
           </li>
         </ul>
       </div>
