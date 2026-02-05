@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://supplyhubco.co.za
+
+# Sitemaps
+Sitemap: https://supplyhubco.co.za/sitemap.xml
